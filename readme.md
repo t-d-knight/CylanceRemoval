@@ -20,9 +20,8 @@ This script has not been widely tested and is provided as-is. It is the responsi
 The author of this script assumes no responsibility for any damage, data loss, or issues caused by the use of this script or any associated tools. Use it at your own risk.
 ---
 ## Required Files
-- **CylanceRemovalTool.0.13.7** - Cylance Removal Tool
-- **CylanceUninstall.ps1** - LMSS Provided script
-- **readme.md** - This document
+- **CylanceRemovalTool.0.13.7** - Cylance Removal Tool - Currently coded for referenced version
+- **CylanceUninstall.ps1** - Provided script
 
 ## Prerequisites
 1. **Administrative Privileges**: The script must be executed with administrative rights.
