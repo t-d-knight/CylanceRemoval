@@ -47,12 +47,12 @@ The author of this script assumes no responsibility for any damage, data loss, o
    Before deploying the script in a production environment, thoroughly test it in a controlled environment to confirm its behavior.
 
 4. **Run the Script**  
-   Open PowerShell as an administrator and execute the script:
+   - Open PowerShell as an administrator and execute the script:
    ```powershell
    .\CylanceUninstall.ps1
-
-    Check the Log File
-    Review CylanceUninstallLog.txt in the same directory as the script for detailed logs of the uninstallation process.
+   ```
+   -Check the Log File
+       - Review CylanceUninstallLog.txt in the same directory as the script for detailed logs of the uninstallation process.
 
 ## Script Workflow
 **Logging**
