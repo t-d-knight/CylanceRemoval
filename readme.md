@@ -11,18 +11,14 @@ This PowerShell script is designed to automate the removal of Cylance security p
 - Executes the Cylance Removal Tool for residual components, if available.
 - Cleans up any leftover shortcuts or folders associated with Cylance products.
 - **Cylance Script Control Exception**: If the script is run from **C:\lmss\ps_scripts\**, it will bypass Cylance's script control, if it is still enabled, and allow the tool to run.
-
 ---
-
 ## Disclaimer
 This script has not been widely tested and is provided as-is. It is the responsibility of the user to:
 - Thoroughly test the script in a controlled, non-production environment before using it in production.
 - Verify its functionality and suitability for their specific use case.
 
 The author of this script assumes no responsibility for any damage, data loss, or issues caused by the use of this script or any associated tools. Use it at your own risk.
-
 ---
-
 ## Required Files
 - **CylanceRemovalTool.0.13.7** - Cylance Removal Tool
 - **CylanceUninstall.ps1** - LMSS Provided script
@@ -32,9 +28,7 @@ The author of this script assumes no responsibility for any damage, data loss, o
 1. **Administrative Privileges**: The script must be executed with administrative rights.
 2. **PowerShell Execution Policy**: Ensure the PowerShell execution policy allows the script to run (e.g., `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`).
 3. **Cylance Removal Tool**: Place the Cylance Removal Tool (`CylanceUninstallTool.0.13.7-x64.exe`) in the folder `.\CylanceRemovalTool.0.13.7\` relative to the script.
-
 ---
-
 ## How to Use
 1. **Download the Script**  
    Save the script as `CylanceUninstall.ps1` on the target machine.
@@ -89,8 +83,8 @@ The script creates a log file named CylanceUninstallLog.txt with entries like th
 - Missing Cylance Removal Tool or other unexpected issues are logged as errors.
 
 ## Notes
-- Policy Verification: If the protection policy is not "0-troubleshoot-NO Security," manually verify the endpoint's status before proceeding.
+- Policy Verification: If the protection policy is not "0-troubleshoot-NO Security", "0-Troubleshooting-NO SECURITY" or "default" manually verify the endpoint's status before proceeding.
 - Cylance Removal Tool: Ensure the tool version matches the environment and is properly configured for silent execution.
 
 ## Support
-- If you encounter issues with the script or need additional assistance, review the log file for detailed error messages and adjust the environment accordingly. Submit log files, and any other findings via the LMSS Service Desk for escalation to the LMSS Cyber Security Team.
+- If you encounter issues with the script or need additional assistance, review the log file for detailed error messages and adjust the environment accordingly.
