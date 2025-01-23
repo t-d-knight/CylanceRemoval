@@ -102,7 +102,7 @@ if (Test-Path $policyPath) {
     $co = Get-WmiObject Win32_Product | Where-Object {$_.Name -like "Cylance*OPTICS*"}
     if ($co) {
         Write-Log "Uninstalling CylanceOPTICS..."
-        Start-Process "msiexec.exe" -ArgumentList "/x $($co.IdentifyingNumber) /qn" -Wait
+        Start-Process "msiexec.exe" -ArgumentList "/x $($co.IdentifyingNumber) /qn /norestart" -Wait
         Write-Log "CylanceOPTICS uninstalled successfully."
     } else {
         Write-Log "CylanceOPTICS not found." -Type "WARNING"
@@ -112,7 +112,7 @@ if (Test-Path $policyPath) {
     $cp = Get-WmiObject Win32_Product | Where-Object {$_.Name -like "Cylance*PROTECT*"}
     if ($cp) {
         Write-Log "Uninstalling CylancePROTECT..."
-        Start-Process "msiexec.exe" -ArgumentList "/x $($cp.IdentifyingNumber) /qn" -Wait
+        Start-Process "msiexec.exe" -ArgumentList "/x $($cp.IdentifyingNumber) /qn /norestart" -Wait
         Write-Log "CylancePROTECT uninstalled successfully."
     } else {
         Write-Log "CylancePROTECT not found." -Type "WARNING"
