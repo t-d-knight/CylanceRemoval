@@ -82,10 +82,10 @@ if (Test-Path $policyPath) {
         Write-Log "Current Cylance Protection Policy: $policyName"
 
         # List of allowed policy names
-        $allowedPolicies = @("0-troubleshoot-NO Security", "0-Troubleshooting-NO SECURITY", "default")
+        $allowedPolicies = @("0-troubleshoot-NO Security", "0-Troubleshooting-NO SECURITY", "default", "04-AQT MPB SCB ORA [Macro Alert Only] TZ-DH24", "03-AQT MPB SCA ORA [Macro Alert Only] TZ-DH24", "LMSS VDI - Phase 2.5 AQT MPB SCA")
 
         if ($policyName -notin $allowedPolicies) {
-            Write-Log "Policy does not appear to be in a disabled state. Please arrange a policy change." -Type "WARNING"
+            Write-Log "Policy does not appear to be in a disabled state. Agent is likely orphaned and needs manual intervention." -Type "WARNING"
             Write-Log "Script halted due to incompatible Cylance policy." -Type "INFO"
             exit
         }
